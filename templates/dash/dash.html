@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+    <title>Lumilab | | Login page</title>
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <div class="p">
+                <p>Lumilab</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="{% static 'img/lumilab-logo.jpeg.png' %}">
+        </div>
+    </header>
+    <!-- <marquee behavior="scroll" direction="">Lumilab | | Moto</marquee> -->
+    <main>
+        <div class="container">
+            <div class="links">
+                <nav>
+                    <ul>
+                        <a href="#" class="active" title="Dashboard">
+                            <span><i class="fa-solid fa-dashboard"></i></span>
+                            <span>Dashboard</span>
+                        </a>
+
+                        <a href="/attend" title="Attendance">
+                            <span><i class="fa fa-user-circle"></i></span>
+                            <span>Attendance</span>
+                        </a>
+                        
+                        <a href="/manage-staff" title="Manage Staff">
+                            <span><i class="fa-solid fa-users"></i></span>
+                            <span>Manage Staff</span>
+                        </a>
+                        
+                        <a href="/manage-student" title="Manage Student">
+                            <span><i class="fa-solid fa-user-graduate"></i></span>
+                            <span>Manage Student</span>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="all-calender">
+            <div class="calender">
+                <div class="month">
+                    <button class="prev" onclick="moveDate('prev')">&#10094;</button>
+                    <div class="date">
+                        <h1 id="monthName">August</h1>
+                        <p id="year">2024</p>
+                    </div>
+                    <button class="next" onclick="moveDate('next')">&#10095;</button>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+        </div>
+    </main>
+    <script src="{% static 'js/calendar.js' %}"></script>
+    <script src="{% static 'js/valid.js' %}"></script>
+    <script>
+        swal.fire("GREAT", "Welcome to Lumilab Attendance Management System", "success")
+    </script>
+</body>
+</html>

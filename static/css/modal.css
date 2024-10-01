@@ -1,0 +1,57 @@
+/* ======= Modal start ======= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 80px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    border-radius: 5px;
+}
+.modal-content h2 {
+    border-bottom: 1px solid rgb(20, 90, 150);
+    padding: 5px;
+}
+.modal-content h2 i {
+    color: rgb(20, 90, 150);
+    padding: 6px;
+    border-radius: 5px;
+}
+form,.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+form .form-group input, select {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgb(232, 232, 232);
+    border-radius: 5px;
+}
+form button {
+    background-color: rgb(20, 90, 150);
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.close-btn {
+    color: red;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}

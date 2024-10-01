@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loader.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+    <title>Lumilab | | Login page</title>
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <div class="p">
+                <p>Lumilab</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="{% static 'img/lumilab-logo.jpeg.png' %}">
+        </div>
+    </header>
+    <main>
+        <div class="containerr">
+            <div class="links">
+                <nav>
+                    <ul>
+                        <a href="/dash" title="Dashboard">
+                            <span><i class="fa-solid fa-dashboard"></i></span>
+                            <span>Dashboard</span>
+                        </a>
+
+                        <a href="#" class="active" title="Attendance">
+                            <span><i class="fa fa-user-circle"></i></span>
+                            <span>Attendance</span>
+                        </a>
+                        
+                        <a href="/manage-staff" title="Manage Staff">
+                            <span><i class="fa-solid fa-users"></i></span>
+                            <span>Manage Staff</span>
+                        </a>
+                        
+                        <a href="/manage-student" title="Manage Student">
+                            <span><i class="fa-solid fa-user-graduate"></i></span>
+                            <span>Manage Student</span>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="main-table">
+                    <div class="back-links">
+                        <a href="/attend" title="Go Back">&larr;Go Back</a>
+                        <div class="sign">
+                            <a href="#" title="Signin">Signin <i class="fa fa-pen"></i></a>
+                            <a href="#" title="Signout">Signout <i class="fa fa-pen"></i></a>
+                        </div>
+                        <div style="display: flex; gap: 5px;">
+                            <div class="form-group">
+                                <input type="search" class="form-control" name="" id="" placeholder="Search Here..." style="background-color: #ffffff8b;">
+                            </div>
+                            <a href="#" title="Add Staff" id="add-staff-btn">Add Staff <i class="fa fa-user"></i></a>
+                        </div>
+                    </div>
+                    <div class="staff-table">
+                        <table class="table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>S/NO</th>
+                                    <th>FULL NAME</th>
+                                    <th>PHONE NUMBER</th>
+                                    <th>EMAIL</th>
+                                    <th>ROLE</th>
+                                    <th colspan="2">STATUS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ishaq aliyu</td>
+                                    <td>08104631675</td>
+                                    <td>isharqvip@gmail.com</td>
+                                    <td>student</td>
+                                    <td class="p-a" title="Present">Present</td>
+                                    <td class="p-b" title="Absent">Absent</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ishaq aliyu</td>
+                                    <td>08104631675</td>
+                                    <td>isharqvip@gmail.com</td>
+                                    <td>student</td>
+                                    <td class="p-a" title="Present">Present</td>
+                                    <td class="p-b" title="Absent">Absent</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ishaq aliyu</td>
+                                    <td>08104631675</td>
+                                    <td>isharqvip@gmail.com</td>
+                                    <td>student</td>
+                                    <td class="p-a" title="Present">Present</td>
+                                    <td class="p-b" title="Absent">Absent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   <!-- Add User Modal -->
+   <div id="add-staff-modal" class="modal">
+    <div class="modal-content" style="width: 50%;">
+        <span class="close-btn">&times;</span>
+        <h2>Add Staff <i  class="fa fa-user-plus"></i></h2><br>
+        <form id="add-staff-form" method="post">
+            <div class="form-group">
+                <label for="fullname"><i class="fa fa-user"></i> Full Name<span style="color: red;"></span>:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="number"><i class="fa fa-phone"></i> Number<span style="color: red;"></span>:</label>
+                <input type="text" id="number" name="number" placeholder="Number" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fa fa-envelope"></i> Email<span style="color: red;"></span>:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <select name="" id="">
+                <option value="staff" selected disabled>---Select Role---</option>
+                <option value="staff">Staff</option>
+                <option value="student">Student</option>
+                <option value="visitor">Visitor</option>
+            </select>
+            <div class="form-group">
+                <label for="password"><i class="fa fa-lock"></i> Password<span style="color: red;"></span>:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="cpassword"><i class="fa fa-lock"></i> Confirm Password<span style="color: red;"></span>:</label>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" id="reg-btn" name="">Add Staff</button>
+        </form>
+    </div>
+</div>
+<div class="loader"></div>
+
+<script src="/static/js/loader.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addStaffBtn = document.getElementById('add-staff-btn');
+        const addStaffModal = document.getElementById('add-staff-modal');
+        const closeBtn = document.querySelector('.close-btn');
+        const addStaffForm = document.getElementById('add-staff-form');
+
+        // Open Add Staff Modal
+        addStaffBtn.addEventListener('click', function() {
+            addStaffModal.style.display = 'block';
+        });
+        // Close the modal
+        closeBtn.addEventListener('click', function() {
+            addStaffModal.style.display = 'none';
+        });
+        // Close the modal when clicking outside of the modal content
+        window.addEventListener('click', function(event) {
+            if (event.target == addStaffModal) {
+                addStaffModal.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>

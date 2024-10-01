@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/loader.css">
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="/static/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <title>Lumilab | | Login page</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+            text-align: left;
+            margin-top: -10px;
+        }
+        .success {
+            border-color: rgb(157, 245, 157);
+        }
+        .failure {
+            border-color: red;
+        }
+        form .form-group input {
+            border: 1px solid silver;
+            outline: none;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <div class="p">
+                <p>Lumilab</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="/static/img/lumilab-logo.jpeg.png">
+        </div>
+    </header>
+    <marquee behavior="scroll" direction="">Lumilab | | Moto</marquee>
+    <main>
+        <div class="container">
+            <div class="login-form">
+                <form action="" method="" id="registrationForm">
+                    <div class="form-group">
+                        <label for="username"><i class="fa fa-user"></i> Username:</label>
+                        <input type="text" id="userName" placeholder="Enter your username" class="form-control">
+                        <div class="error" id="userNameError">Please enter a valid username.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fa-solid fa-lock"></i> Password:</label>
+                        <input type="password" id="password" placeholder="Enter your username" class="form-control">
+                        <div class="error" id="passwordError">Please enter a valid password.</div>
+                    </div>
+                    <div class="form-group">
+                        <button class="form-control"><i class="fa fa-sign-in"></i> Login</button>
+                    </div>
+                    <!-- <p>Forget Password? <a href="recover.html" style="font-size: 14px;">Recover It</a></p> -->
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="loader"></div>
+
+    <script src="/static/js/loader.js"></script>
+    <script src="/static/js/valid.js"></script>
+    <script>
+        // swal.fire("GREAT", "Welcome to Lumilab Attendance Management System", "success")
+    </script>
+</body>
+</html>

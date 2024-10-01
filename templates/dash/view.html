@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/view.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=ADLaM Display' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static 'sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+    <title>Lumilab | | Login page</title>
+</head>
+<body>
+    <header>
+        <div class="brand-name">
+            <div class="p">
+                <p>Lumilab</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="{% static 'img/lumilab-logo.jpeg.png' %}">
+        </div>
+    </header>
+    <main>
+        <div class="back-links">
+            <!-- conditional statement -->
+            <!-- if(staff): -->
+                <a href="/manage-staff" title="Go Back">&larr;Go Back</a>
+            <!-- else: -->
+                <!-- <a href="/manage-student" title="Go Back">&larr;Go Back</a> -->
+        </div>
+        <div class="all-view">
+            <div class="view-user">
+                <div class="head">
+                    <p>ID</p>
+                    <p>FULL NAME</p>
+                    <p>NUMBER</p>
+                    <p>EMAIL</p>
+                    <p>STATUS</p>
+                </div>
+                <div class="data">
+                    <p>1</p>
+                    <p>ishaq aliyu</p>
+                    <p>08104631675</p>
+                    <p>isharqvip@gmail.com</p>
+                    <p>student</p>
+                </div>
+            </div>
+           
+        </div>
+     </main>
+    <script src="{% static 'js/valid.js' %}"></script>
+</body>
+</html>
